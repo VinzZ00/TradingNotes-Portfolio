@@ -82,7 +82,7 @@ struct DetailAssetView: View {
                 Button {
                     viewModel.addToCopyClipBoard(content: String(viewModel.totalAssetInHand))
                 } label: {
-                    Text("Trade")
+                    Text("Copy the amount to clipboard")
                         .foregroundStyle(colorScheme == .dark ? .white : .black)
                         .font(.system(size: 16, weight: .bold))
                         .padding()
