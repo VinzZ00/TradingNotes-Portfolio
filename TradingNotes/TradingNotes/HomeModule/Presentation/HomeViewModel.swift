@@ -87,7 +87,7 @@ class HomeViewModel : ObservableObject {
         return stockBought.reduce(into: [Stock : (Double, Double)]()) { res, s in
             if s.isSold == false {
                 if let (quant, price) = res[s] {
-                    var price = (price * quant + s.StockPrice * s.StockQuantity) / (quant + s.StockQuantity)
+                    var price = (price + s.StockPrice) / (quant + s.StockQuantity)
                     var totalQUant = quant + s.StockQuantity
                     res[s] = (totalQUant, price)
                 } else {
